@@ -14,3 +14,18 @@ Running this container is made complex because OpenPose by default creates a gra
 ```
 docker run -it -v $(pwd)/command.sh:/command.sh -v $(pwd)/output_jsons:/output_jsons  -v $(pwd)/output_images:/output_images --rm openpose:cpu
 ```
+with the command.sh content
+```
+./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_json /output_jsons/ --write_images /output_images/
+```
+
+
+A sample example to analyze images in a directory
+```
+docker run -it -v $(pwd)/command.sh:/command.sh -v $(pwd)/samples:/samples -v $(pwd)/output_jsons:/output_jsons  -v $(pwd)/output_images:/output_images --rm openpose:cpu
+```
+
+With the command.sh content
+```
+./build/examples/openpose/openpose.bin --image_dir /samples/ --write_json /output_jsons/ --write_images /output_images/
+```

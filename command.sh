@@ -1,3 +1,3 @@
-./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_json /output_jsons/ --write_images /output_images/
+./build/examples/openpose/openpose.bin --image_dir /samples/ --write_json /output_jsons/ --write_images /output_images/ --face
 
 
